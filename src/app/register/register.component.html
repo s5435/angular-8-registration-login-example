@@ -15,6 +15,20 @@
         </div>
     </div>
     <div class="form-group">
+        <label for="nic">NIC</label>
+        <input type="text" formControlName="nic" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nic.errors }" />
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.nic.errors.required">NIC</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="nic">Salary</label>
+        <input type="text" formControlName="salary" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.salary.errors }" />
+        <div *ngIf="submitted && f.salary.errors" class="invalid-feedback">
+            <div *ngIf="f.salary.errors.required">Salary</div>
+        </div>
+    </div>
+    <div class="form-group">
         <label for="username">Username</label>
         <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
         <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
